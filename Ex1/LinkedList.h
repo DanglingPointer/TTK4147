@@ -20,7 +20,7 @@ struct Node
 class LinkedList
 {
 public:
-    LinkedList():m_pHead(NULL), m_pTail(NULL), m_length(0)
+    LinkedList():m_pHead(nullptr), m_pTail(nullptr), m_length(0)
     {}
     std::size_t get_Length() const
     {
@@ -28,12 +28,12 @@ public:
     }
     void Delete()
     {
-        for(Node *pcurrent = m_pHead; pcurrent != NULL; ){
+        for(Node *pcurrent = m_pHead; pcurrent != nullptr; ){
             Node *pnext = pcurrent->pNext;
             delete pcurrent;
             pcurrent = pnext;
         }
-        m_pHead=m_pTail= NULL;
+        m_pHead=m_pTail= nullptr;
         m_length=0;
     }
     bool Insert(std::size_t index, int data)
@@ -42,7 +42,7 @@ public:
             return false;
 
         if (index == 0){
-            Node *pnew = new Node(NULL, m_pHead, data);
+            Node *pnew = new Node(nullptr, m_pHead, data);
             if (m_pHead)
                 m_pHead->pPrev = pnew;
             m_pHead = pnew;
@@ -50,7 +50,7 @@ public:
                 m_pTail = m_pHead;
         }
         else if (index == m_length){
-            Node *pnew = new Node(m_pTail, NULL, data);
+            Node *pnew = new Node(m_pTail, nullptr, data);
             if (m_pTail)
                 m_pTail->pNext = pnew;
             m_pTail = pnew;
@@ -75,7 +75,7 @@ public:
     }
     void Print() const
     {
-        for(Node *pcurrent = m_pHead; pcurrent != NULL; pcurrent = pcurrent->pNext){
+        for(Node *pcurrent = m_pHead; pcurrent != nullptr; pcurrent = pcurrent->pNext){
             std::cout << pcurrent->data << " ";
         }
         std::cout << std::endl;
@@ -83,7 +83,7 @@ public:
     int GetSum() const
     {
         int sum = 0;
-        for(Node *pcurrent = m_pHead; pcurrent != NULL; pcurrent = pcurrent->pNext){
+        for(Node *pcurrent = m_pHead; pcurrent != nullptr; pcurrent = pcurrent->pNext){
             sum += pcurrent->data;
         }
         return sum;
@@ -92,7 +92,7 @@ public:
     int get_At(std::size_t index) const
     {
         std::size_t i = 0;
-        for(Node *pcurrent = m_pHead; pcurrent != NULL; pcurrent = pcurrent->pNext){
+        for(Node *pcurrent = m_pHead; pcurrent != nullptr; pcurrent = pcurrent->pNext){
             if (i++ == index)
                 return pcurrent->data;
         }
