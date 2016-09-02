@@ -23,7 +23,7 @@ int main(int argc, char **argv)
     list.Print();
 
     std::cout << "Extract inserted value: " << list.Extract(5) << std::endl;
-    list.Print();0
+    list.Print();
 
     std::cout << "Remove all but the last value\n";
 
