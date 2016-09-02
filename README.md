@@ -52,10 +52,9 @@ clean:
 
 ###Ex1
 
-[real, user, sys time](http://stackoverflow.com/a/556411)
-
-[Update to g++-4.9 version](http://superuser.com/a/796621)
-
+- [real, user, sys time](http://stackoverflow.com/a/556411)
+- [Update to g++-4.9 version](http://superuser.com/a/796621)
+- [Unlink symbol](http://stackoverflow.com/a/210130)
 ```
 g++ --version
 g++-4.9 -std=gnu++14 -lrt -pthread AssD.cpp AssD
