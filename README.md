@@ -48,3 +48,9 @@ clean:
 
 .PHONY: all clean
 ```
+
+
+###Ex1
+
+[real, user, sys time](http://stackoverflow.com/a/556411)
+
