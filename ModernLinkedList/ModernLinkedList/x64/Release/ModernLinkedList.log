@@ -1,0 +1,4 @@
+﻿  ListTest.cpp
+c:\git\ttk4147\modernlinkedlist\modernlinkedlist\src\..\include\List.h(134): error C2144: syntax error: 'LinkedList' should be preceded by ';'
+c:\git\ttk4147\modernlinkedlist\modernlinkedlist\src\..\include\List.h(134): error C2988: unrecognizable template declaration/definition
+c:\git\ttk4147\modernlinkedlist\modernlinkedlist\src\..\include\List.h(134): error C2143: syntax error: missing ';' before '<end Parse>'
