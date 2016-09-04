@@ -1,4 +1,7 @@
-#pragma once
+#ifndef LLIST_H
+#define LLIST_H
+// singly-linked list using C++11
+
 #include <memory>
 #include <iostream>
 
@@ -20,15 +23,15 @@ template <class TVal> struct Node
 template <class TVal> class LinkedList
 {
 public:
-    typedef typename Node<TVal>::Ptr_t Ptr_t;
-    typedef LinkedList<TVal> My_t;
+    typedef typename Node<TVal>::Ptr_t  Ptr_t;
+    typedef LinkedList<TVal>            My_t;
 
     LinkedList() :m_pHead(), m_length(0)
     { }
     LinkedList(My_t&& rhs) :m_pHead(std::move(rhs.m_pHead)),m_length(rhs.m_length)
     { }
-    LinkedList(const My_t&) = delete;
-    My_t& operator=(const My_t& rhs) = delete;
+    LinkedList(const My_t&)             = delete;
+    My_t& operator=(const My_t& rhs)    = delete;
     My_t& operator=(My_t&& rhs)
     {
         m_pHead = std::move(rhs.m_pHead);
@@ -119,7 +122,7 @@ public:
         }
     }
 private:
-    Ptr_t m_pHead;
+    Ptr_t       m_pHead;
     std::size_t m_length;
 };
 
@@ -132,3 +135,5 @@ inline int LinkedList<int>::GetSum() const
     }
     return sum;
 }
+
+#endif

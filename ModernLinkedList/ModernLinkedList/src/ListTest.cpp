@@ -1,10 +1,10 @@
-//#include "..\include\DLList.h"
-#include "..\include\LList.h"
+#include "..\include\DLList.h"
+//#include "..\include\LList.h"
 
 int main()
 {
 	std::cout << "Create list\n";
-	LinkedList<int> list;
+	DLinkedList<int> list;
 
 	std::cout << "append valued 0 to 9\n";
 	for (int i = 0; i<10; i++) {
