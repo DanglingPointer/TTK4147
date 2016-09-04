@@ -1,4 +1,5 @@
-#include "..\include\List.h"
+//#include "..\include\DLList.h"
+#include "..\include\LList.h"
 
 int main()
 {

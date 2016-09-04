@@ -19,7 +19,8 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="include\List.h" />
+    <ClInclude Include="include\DLList.h" />
+    <ClInclude Include="include\LList.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\ListTest.cpp" />
