@@ -1,0 +1,8 @@
+﻿  ListTest.cpp
+  Generating code
+  93 of 107 functions (86.9%) were compiled, the rest were copied from previous compilation.
+    87 functions were new in current compilation
+    6 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  ModernLinkedList.vcxproj -> C:\Git\TTK4147\ModernLinkedList\x64\Release\ModernLinkedList.exe
+  ModernLinkedList.vcxproj -> C:\Git\TTK4147\ModernLinkedList\x64\Release\ModernLinkedList.pdb (Full PDB)
