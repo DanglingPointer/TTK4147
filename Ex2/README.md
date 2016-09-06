@@ -1,4 +1,4 @@
-1. Run the programs from assignments A and B with fork, vfork and threads.
+1.Run the programs from assignments A and B with fork, vfork and threads.
 
 - What is the difference between fork and vfork?
 
@@ -9,7 +9,7 @@ vfork() has undefined behaviour when trying to access any variables except from 
 Global variables are cached (each thread has its own copy). 
 
 
-2. Run the program from assignment C.
+2.Run the program from assignment C.
 
 - What happens with the threads that does not get access to a resource right away?
 
@@ -19,14 +19,14 @@ It waits (does nothing and releases all its locks).
 
 The resources are shared randomly.
 
-3. Run the program from assignment D.
+3.Run the program from assignment D.
 
 - What happens when running the threads before adding a mutex, and why?
 
 Nothing goes wrong! WHY??
 Expected: Second thread shows non-incremented variables because the first thread increments their cached copies. 
 
-4. Run the program from assignment E.
+4.Run the program from assignment E.
 
 - How did the deadlock happen?
 
