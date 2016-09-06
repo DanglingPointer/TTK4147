@@ -61,5 +61,5 @@ g++-4.9 -std=gnu++14 -lrt -pthread AssD.cpp AssD
 g++-4.9 --version
 ```
 ```cmake
-set(CMAKE_CXX_COMPILER "/usr/bin/g++-4.2")
+set(CMAKE_CXX_COMPILER "/usr/bin/g++-4.9")
 ```
