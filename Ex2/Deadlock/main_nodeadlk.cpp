@@ -57,6 +57,7 @@ public:
             std::cout << "Philosofer " << m_index << " eating\n";
             std::this_thread::sleep_for(std::chrono::seconds(1));
             fp.PutDown();
+	    std::this_thread::sleep_for(std::chrono::seconds(1));
         }
     }
 private:

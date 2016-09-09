@@ -18,8 +18,6 @@ void foo1()
     while (running) {
         ++var1;
         var2 = var1;
-        //without the following line the numbers are fcked (at least using cygwin)
-        std::this_thread::sleep_for(std::chrono::microseconds(100000));
     }
 }
 void foo2()
