@@ -63,3 +63,6 @@ g++-4.9 --version
 ```cmake
 set(CMAKE_CXX_COMPILER "/usr/bin/g++-4.9")
 ```
+###Ex5
+
+```g++-4.9 main.cpp io.cpp -std=gnu++14 -lcomedi -lrt -pthread -lm -o AssA```
