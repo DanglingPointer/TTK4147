@@ -9,66 +9,6 @@
 
 #include "io.h"
 
-/*
-void timespec_add_us(struct timespec *t, long us)
-{
-// add microseconds to timespecs nanosecond counter
-    t->tv_nsec += us*1000;
-// if wrapping nanosecond counter, increment second counter
-    if (t->tv_nsec > 1000000000)
-    {
-        t->tv_nsec = t->tv_nsec - 1000000000;
-        t->tv_sec += 1;
-    }
-}
-
-int set_cpu(int cpu_number)
-{
-// setting cpu set to the selected cpu
-    cpu_set_t cpu;
-    CPU_ZERO(&cpu);
-    CPU_SET(cpu_number, &cpu);
-// set cpu set to current thread and return
-    return pthread_setaffinity_np(pthread_self(), sizeof(cpu_set_t), &cpu);
-}
-
-void TaskA2(int channel)
-{
-    set_cpu(1);
-    timespec next;
-    for(;;){
-        if (!io_read(channel)){
-            io_write(channel, 1);
-            std::this_thread::sleep_for(std::chrono::microseconds(5));
-            io_write(channel, 0);
-        }
-        clock_gettime(CLOCK_REALTIME, &next);
-        timespec_add_us(&next, 100);
-        clock_nanosleep(CLOCK_REALTIME, TIMER_ABSTIME, &next, NULL);
-    }
-}
-
-void TaskA1(int channel)
-{
-    for(;;){
-        if (!io_read(channel)){
-            io_write(channel, 1);
-            std::this_thread::sleep_for(std::chrono::microseconds(5));
-            io_write(channel, 0);
-        }
-    }
-}
-
-long long TaskBDisturbance(){
-    set_cpu(1);
-    long long i = 0;
-    for(;;){
-        ++i;
-    }
-    return i;
-}
-*/
-
 void rt_foo(void *cookie){
     for(;;){
         rt_task_wait_period(NULL);
@@ -119,17 +59,17 @@ int main() {
     }
 
 
-    if (rt_task_set_periodic(&h1, TM_NOW, 30000)) {
+    if (rt_task_set_periodic(&h1, TM_NOW, 10000)) {
         printf("Periodic error");
         return 2;
     }
 
-    if (rt_task_set_periodic(&h2, TM_NOW, 30000)) {
+    if (rt_task_set_periodic(&h2, TM_NOW, 10000)) {
         printf("Periodic error");
         return 2;
     }
 
-    if (rt_task_set_periodic(&h3, TM_NOW, 30000)) {
+    if (rt_task_set_periodic(&h3, TM_NOW, 10000)) {
         printf("Periodic error");
         return 2;
     }
