@@ -50,7 +50,7 @@ local.properties
 .recommenders/
 
 # Built files
-x86/
+# x86/
 arm/
 arm-p/
 translations/*.qm
@@ -64,7 +64,7 @@ translations/*.qm
 # Compiled Object files
 *.slo
 *.lo
-*.o
+# *.o
 *.obj
 
 # Precompiled Headers
@@ -95,7 +95,7 @@ translations/*.qm
 *.d
 
 # Object files
-*.o
+# *.o
 *.ko
 *.obj
 *.elf
@@ -126,7 +126,7 @@ translations/*.qm
 *.out
 *.app
 *.i*86
-*.x86_64
+# *.x86_64
 *.hex
 
 # Debug files
@@ -164,7 +164,7 @@ dkms.conf
 [Rr]elease/
 [Rr]eleases/
 x64/
-x86/
+# x86/
 bld/
 [Bb]in/
 [Oo]bj/
