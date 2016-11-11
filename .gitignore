@@ -96,7 +96,7 @@ translations/*.qm
 
 # Object files
 # *.o
-*.ko
+#*.ko
 *.obj
 *.elf
 
