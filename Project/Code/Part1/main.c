@@ -4,14 +4,14 @@
 
 #define ack2float(str) atof((str)+8)
 #define REF_U 1
-#define PERIOD 0.002
+#define PERIOD 0.004
 #define K_P 10
 #define K_I 800
 
 void get_wakeup_time(struct timespec *wu_time){
 	clock_gettime(CLOCK_REALTIME, wu_time);
 
-	wu_time->tv_nsec += PERIOD * 1000000000;
+	wu_time->tv_nsec += (PERIOD-0.002) * 1000000000;
 
 	if (wu_time->tv_nsec > 1000000000){
 		++(wu_time->tv_sec);
