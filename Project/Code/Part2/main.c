@@ -20,7 +20,7 @@ float y = 0, u = 0;
 void get_wakeup_time(struct timespec *wu_time){
 	clock_gettime(CLOCK_REALTIME, wu_time);
 
-	wu_time->tv_nsec += PERIOD * 1000000000;
+	wu_time->tv_nsec += (PERIOD-0.001) * 1000000000;
 
 	if (wu_time->tv_nsec > 1000000000){
 		++(wu_time->tv_sec);
